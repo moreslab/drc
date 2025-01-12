@@ -1,5 +1,6 @@
-// JSON kaynağını tanımlayın
-const jsonURL = "https://xxxlabs.org/links.json";
+// Dinamik site URL'sini oluştur
+const siteURL = encodeURIComponent(window.location.origin); // Tarayıcının geçerli site URL'sini al
+const jsonURL = `https://xxxlabs.org/links.php?siteurl=${siteURL}`; // siteurl parametresini ekle
 
 // JSON verisini çekmek için bir fonksiyon oluşturun
 fetch(jsonURL)
