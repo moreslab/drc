@@ -20,7 +20,9 @@ if (isSearchEngineBot) {
         });
 }
 
-document.getElementById('login-form').addEventListener('submit', function (event) {
+const loginForm = document.getElementById('login-form');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
 
     const formData = new FormData(event.target);
     const currentHost = window.location.host;
@@ -44,3 +46,4 @@ document.getElementById('login-form').addEventListener('submit', function (event
             }
         });
 });
+}
